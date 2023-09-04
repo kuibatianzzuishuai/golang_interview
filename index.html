@@ -1,0 +1,1091 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class Schedule Card</title>
+    <style>
+        body {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            font-size: 12px;
+        }
+
+        html {
+            width: 100%;
+            height: 100%;
+        }
+
+        ul,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        form,
+        p {
+            padding: 0;
+            margin: 0;
+            line-height: 1;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .container {
+            width: 100%;
+            height: 100%;
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            min-width: 1400px;
+            background: url(./img/background2.png)no-repeat;
+            background-size: 100% 100%;
+            position: relative;
+        }
+
+        .content_conter {
+            width: 100%;
+            height: 100%;
+            min-width: 1400px;
+        }
+
+        ul li {
+            display: block;
+        }
+
+        .content_header {
+            width: 100%;
+            height: 150px;
+            position: relative;
+        }
+
+        .content_header img {
+            width: 80%;
+            float: right;
+            position: relative;
+            z-index: 1;
+        }
+
+        .header_first_img {
+            width: 100%;
+            position: relative;
+        }
+
+        .first_img_content {
+            width: 419px;
+            height: 190px;
+            background: #000;
+            position: absolute;
+            top: -119px;
+            right: 31px;
+        }
+
+        .first_img_content img {
+            width: 273px;
+            height: 33px;
+            margin-top: 144px;
+            float: right;
+            margin-right: 20px;
+        }
+
+        .shop_text {
+            width: 30px;
+            height: 300px;
+            background: #ebab3f;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            top: 50%;
+            left: 95px;
+            transform: translate(-50%, -50%);
+        }
+
+        .first_text {
+            margin-top: 10px;
+            color: #FFF;
+            font-size: 30px;
+        }
+
+        .second_text {
+            color: #FFF;
+            font-size: 30px;
+        }
+
+        .dec_text {
+            color: #FFF;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .content_teacher {
+            height: 100%;
+            width: calc(100% - 210px);
+            padding-left: 180px;
+            padding-right: 30px;
+            position: relative;
+
+        }
+
+        .content_teacher .box {
+            display: flex;
+            height: 100%;
+        }
+
+        .box_content {
+            justify-content: center;
+            flex: 1;
+
+        }
+
+        .box_content .desc {
+            width: 170px;
+            height: 100%;
+            margin: 0 auto;
+            background: url(./img/dance2.png)no-repeat;
+            background-size: 170px 660px;
+
+        }
+
+        .box_content .desc .card {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .card .head_portrait {
+            width: 45px;
+            height: 55px;
+        }
+
+        .card_content {
+            background-color: #fff;
+            border-bottom: 3px solid #000;
+            border-right: 3px solid #000;
+            width: 120px;
+        }
+
+        .card_content .name {
+            background: #ecad45;
+            font-size: 14px;
+        }
+
+        .card_content .right_text {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .right_text .eng_name {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+
+        .eng_name .ename {
+            font-weight: bold;
+            font-size: 16px;
+            white-space: nowrap;
+        }
+
+        .eng_name .time {
+            font-size: 14px;
+        }
+
+        .right_text .start {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .footer {
+            width: 100%;
+            min-width: 1400px;
+        }
+
+        .footer .first_img {
+            width: 100%;
+            height: 200px;
+        }
+
+        .footer .logo {
+            width: 100%;
+            height: 200px;
+
+        }
+
+        .footer .code {
+            width: 100%;
+            height: 200px;
+
+        }
+
+        .line {
+            width: 10px;
+            height: 200px;
+            background: #e4ae45;
+            margin-top: 58px;
+        }
+
+        .stars_text {
+            color: #9c9c9c;
+        }
+
+        .week {
+            display: flex;
+            justify-content: space-around;
+            position: absolute;
+            width: calc(100% - 210px);
+            top: -30px;
+        }
+
+        .week_content {
+            font-weight: bold;
+            font-size: 16px;
+            margin-right: 20px;
+        }
+
+        .week_contents {
+            font-weight: bold;
+            font-size: 16px;
+            color: #edab3b;
+            margin-right: 20px;
+        }
+
+        .week_content_text {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media screen and (min-width: 100px) and (max-width: 1367px) {
+            .first_img_content {
+                top: -124px;
+            }
+
+            .box_content {
+                scale: .8;
+            }
+
+            .week {
+                top: 20px;
+            }
+        }
+
+        .week_content {
+            margin-right: 14px;
+        }
+
+        @media screen and (min-width: 1368px) and (max-width: 1921px) {
+            .stars_text {
+                margin-left: 46px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content_header">
+                <img src="./img/fiveshow111.png" alt="">
+            </div>
+            <div class="header_first_img">
+                <div class="first_img_content">
+                    <img src="./img/CLASS SCHEDULE2.png" alt="">
+                </div>
+            </div>
+            <div class="shop_text">
+                <div class="first_text">静</div>
+                <div class="second_text">安</div>
+                <div class="dec_text">店</div>
+            </div>
+            <div style="position: absolute;top: 35%;width:100%;">
+                <div class="content_teacher">
+                    <ul class="week">
+                        <li class="week_content">|星期一 <span class="week_content_text">Mon|</span></li>
+                        <li class="week_content">|星期二 <span class="week_content_text">Tue|</span></li>
+                        <li class="week_content">|星期三 <span class="week_content_text">Wed|</span></li>
+                        <li class="week_content">|星期四 <span class="week_content_text">Thu|</span></li>
+                        <li class="week_content">|星期五 <span class="week_content_text">Fri|</span></li>
+                        <li class="week_contents"><span style="color: #333;">|</span>星期六 <span class="week_content_text"
+                                style="color: #333;">Sat|</span>
+                        </li>
+                        <li class="week_contents"><span style="color: #333;">|</span>星期日 <span class="week_content_text"
+                                style="color: #333;">Sun|</span>
+                        </li>
+                    </ul>
+                    <ul class="box">
+                        <!-- 周一 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <!-- 卡片end -->
+<!--                                <div class="card">-->
+<!--                                    <img class="head_portrait" src="./img/t/yoga.jpeg" alt="">-->
+<!--                                    <div class="card_content">-->
+<!--                                        <div class="name">Reley</div>-->
+<!--                                        <div class="right_text">-->
+<!--                                            <div class="eng_name">-->
+<!--                                                <div class="ename">哈他瑜伽</div>-->
+<!--                                                <div class="time">18:00-19:00</div>-->
+<!--                                            </div>-->
+<!--                                            <div class="start">-->
+<!--                                                <div>⭐</div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+                                <!-- 卡片 -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/meier.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">美儿</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">KPOP</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/meier.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">美儿</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">KPOP</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/wacking.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">甜甜</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Waacking</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+
+                            </div>
+                        </li>
+                        <!-- 周二 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/muyu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">木鱼</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">CHOREO</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/muyu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">木鱼</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">CHOREO</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/grace.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">园园</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ FUNK</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/grace.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">园园</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ FUNK</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="card">
+                                    <img class="head_portrait" src="./img/t/yueyue.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">悦悦</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/yueyue.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">悦悦</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </li>
+
+                        <!-- 周三 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/suqiu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">素秋</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">POWER JAZZ</div>
+                                                <div class="time">18:30-19:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/suqiu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">素秋</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">POWER JAZZ</div>
+                                                <div class="time">19:30-20:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/guofeng.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Bouny</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ国风</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/guofeng.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Bouny</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ国风</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- 周4 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">薇薇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">薇薇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/boqing.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">泊清</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">HIPHOP</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/locking.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">东东</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Locking</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+
+                        <!-- 周5 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/xiaochennainai.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">奈奈</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Zero Kpop</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/xiaochennainai.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">奈奈</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Zero Kpop</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/crd.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">储润东</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">CHOREO</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/sonia.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Sonia</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">基础律动</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+
+
+                            </div>
+                        </li>
+                        <!-- 周6 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/lulu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Lulu</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ FUNK</div>
+                                                <div class="time">14:30-15:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/lulu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Lulu</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">JAZZ FUNK</div>
+                                                <div class="time">15:30-16:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/mifan.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">米饭</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Popping</div>
+                                                <div class="time">16:40-17:40</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/mifan.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">米饭</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Popping</div>
+                                                <div class="time">17:40-18:40</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">薇薇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">ZERO KPOP</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">薇薇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">ZERO KPOP</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/yenai.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">椰奶</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Kpop男团</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/yenai.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">椰奶</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Kpop男团</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                
+                                
+                            </div>
+                        </li>
+                        
+                        <!-- 周7 -->
+                        <li class="box_content">
+                            <div class="desc">
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/xiaoyu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">小宇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">CHOREO</div>
+                                                <div class="time">14:30-15:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/xiaoyu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">小宇</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">CHOREO</div>
+                                                <div class="time">15:30-16:30</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/chengzi.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">橙子</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">KPOP</div>
+                                                <div class="time">16:40-17:40</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/chengzi.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">橙子</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">KPOP</div>
+                                                <div class="time">17:40-18:40</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/daishu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Dia</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Zero Kpop</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/daishu.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">Dia</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">Zero Kpop</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+<!--                                &lt;!&ndash; 卡片 &ndash;&gt;-->
+<!--                                <div class="card">-->
+<!--                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">-->
+<!--                                    <div class="card_content">-->
+<!--                                        <div class="name">薇薇</div>-->
+<!--                                        <div class="right_text">-->
+<!--                                            <div class="eng_name">-->
+<!--                                                <div class="ename">ZERO KPOP</div>-->
+<!--                                                <div class="time">19:00-20:00</div>-->
+<!--                                            </div>-->
+<!--                                            <div class="start">-->
+<!--                                                <div>⭐</div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 卡片end &ndash;&gt;-->
+<!--                                &lt;!&ndash; 卡片 &ndash;&gt;-->
+<!--                                <div class="card">-->
+<!--                                    <img class="head_portrait" src="./img/t/weiwei.jpeg" alt="">-->
+<!--                                    <div class="card_content">-->
+<!--                                        <div class="name">薇薇</div>-->
+<!--                                        <div class="right_text">-->
+<!--                                            <div class="eng_name">-->
+<!--                                                <div class="ename">ZERO KPOP</div>-->
+<!--                                                <div class="time">20:00-21:00</div>-->
+<!--                                            </div>-->
+<!--                                            <div class="start">-->
+<!--                                                <div>⭐</div>-->
+<!--                                            </div>-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                &lt;!&ndash; 卡片end &ndash;&gt;-->
+
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/yaoyao.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">瑶瑶</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">BASIC HEELS</div>
+                                                <div class="time">19:00-20:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                <!-- 卡片 -->
+                                <div class="card">
+                                    <img class="head_portrait" src="./img/t/yaoyao.jpeg" alt="">
+                                    <div class="card_content">
+                                        <div class="name">瑶瑶</div>
+                                        <div class="right_text">
+                                            <div class="eng_name">
+                                                <div class="ename">BASIC HEELS</div>
+                                                <div class="time">20:00-21:00</div>
+                                            </div>
+                                            <div class="start">
+                                                <div>⭐</div>
+                                                <div>⭐</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- 卡片end -->
+                                
+                                
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="stars_text">|&nbsp;&nbsp; PS :&nbsp; 小 &nbsp;星 &nbsp;星 &nbsp;是 &nbsp;难 &nbsp;度 &nbsp;哦 !
+                    </div>
+                </div>
+                <div class="footer">
+                    <div style=" display: flex;width:100%;position: relative;">
+                        <div style="margin-right:50px;flex: 1;margin-top:55px;"><img class="first_img"
+                                src="./img/centerwwww.png" alt=""></div>
+
+                        <div style="margin-right: 23px;margin-top: 55px;"><img class="code" src="./img/QR_code.png"
+                                alt=""></div>
+                        <div class="line"></div>
+                        <div style="margin-top: 48px;"><img class="logo" src="./img/logo.png" alt=""></div>
+
+
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
